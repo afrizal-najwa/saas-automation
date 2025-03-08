@@ -1,0 +1,28 @@
+FROM node:20-alpine
+
+# Install OpenSSL for Prisma
+RUN apk add --no-cache openssl libc6-compat
+
+WORKDIR /app
+
+# Copy package.json and package-lock.json (if available)
+COPY package.json package-lock.json* ./
+
+# Install dependencies
+RUN npm install
+
+# Next.js collects anonymous telemetry data about general usage - disable it
+ENV NEXT_TELEMETRY_DISABLED 1
+
+COPY . .
+
+# Generate Prisma client
+RUN npx prisma generate
+
+ENV NODE_ENV development
+ENV NEXT_TELEMETRY_DISABLED 1
+
+# Expose the listening port
+EXPOSE 3000
+
+CMD ["sh", "-c", "npx prisma migrate deploy && npm run dev"]
