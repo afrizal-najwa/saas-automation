@@ -37,22 +37,16 @@ const UploadCareButton = ({ onUpload }: Props) => {
 
   return (
     <div>
-      <lr-config
-        ctx-name="my-uploader"
-        pubkey="9a60fdf8036a31309f5f"
-      />
+      <lr-config ctx-name="my-uploader" pubkey="b42e555750aa519dc7d4" />
 
       <lr-file-uploader-regular
         ctx-name="my-uploader"
         css-src={`https://cdn.jsdelivr.net/npm/@uploadcare/blocks@0.35.2/web/lr-file-uploader-regular.min.css`}
       />
 
-      <lr-upload-ctx-provider
-        ctx-name="my-uploader"
-        ref={ctxProviderRef}
-      />
+      <lr-upload-ctx-provider ctx-name="my-uploader" ref={ctxProviderRef} />
     </div>
-  )
+  );
 }
 
 export default UploadCareButton

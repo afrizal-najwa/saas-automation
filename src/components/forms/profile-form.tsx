@@ -1,10 +1,10 @@
-'use client'
+"use client";
 
-import React, { use, useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { z } from 'zod'
-import { EditUserProfileSchema } from '@/lib/types'
+import React, { use, useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { z } from "zod";
+import { EditUserProfileSchema } from "@/lib/types";
 import {
   Form,
   FormControl,
@@ -12,38 +12,54 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from '../ui/form'
-import { Input } from '../ui/input'
-import { Button } from '../ui/button'
-import { Loader2 } from 'lucide-react'
+} from "../ui/form";
+import { Input } from "../ui/input";
+import { Button } from "../ui/button";
+import { Loader2 } from "lucide-react";
 
 type Props = {
-  user: any
-  onUpdate?: any
-}
+  user: any;
+  onUpdate?: any;
+};
 
 const ProfileForm = ({ user, onUpdate }: Props) => {
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  // Cek jika user tidak null dan memiliki properti name dan email
   const form = useForm<z.infer<typeof EditUserProfileSchema>>({
-    mode: 'onChange',
+    mode: "onChange",
     resolver: zodResolver(EditUserProfileSchema),
     defaultValues: {
-      name: user.name,
-      email: user.email,
+      name: user?.name || "", // Fallback jika user atau name null
+      email: user?.email || "", // Fallback jika user atau email null
     },
-  })
+  });
 
   const handleSubmit = async (
     values: z.infer<typeof EditUserProfileSchema>
   ) => {
-    setIsLoading(true)
-    await onUpdate(values.name)
-    setIsLoading(false)
-  }
+    setIsLoading(true);
+    setError(null); // Reset error state sebelum mengirim
+
+    try {
+      // Panggil fungsi onUpdate dengan nilai yang diubah
+      await onUpdate(values.name);
+    } catch (err) {
+      // Tangani error jika ada kesalahan saat API request
+      console.error("Error updating user profile:", err);
+      setError("Failed to update user profile. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   useEffect(() => {
-    form.reset({ name: user.name, email: user.email })
-  }, [user])
+    // Reset form hanya jika user ada dan memiliki properti name, email
+    if (user) {
+      form.reset({ name: user?.name || "", email: user?.email || "" });
+    }
+  }, [user]);
 
   return (
     <Form {...form}>
@@ -51,6 +67,13 @@ const ProfileForm = ({ user, onUpdate }: Props) => {
         className="flex flex-col gap-6"
         onSubmit={form.handleSubmit(handleSubmit)}
       >
+        {/* Menampilkan error global jika ada */}
+        {error && (
+          <div className="text-red-500 mb-4">
+            <p>{error}</p>
+          </div>
+        )}
+
         <FormField
           disabled={isLoading}
           control={form.control}
@@ -59,10 +82,7 @@ const ProfileForm = ({ user, onUpdate }: Props) => {
             <FormItem>
               <FormLabel className="text-lg">User full name</FormLabel>
               <FormControl>
-                <Input
-                  {...field}
-                  placeholder="Name"
-                />
+                <Input {...field} placeholder="Name" />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -77,7 +97,7 @@ const ProfileForm = ({ user, onUpdate }: Props) => {
               <FormControl>
                 <Input
                   {...field}
-                  disabled={true}
+                  // disabled={true}
                   placeholder="Email"
                   type="email"
                 />
@@ -96,12 +116,12 @@ const ProfileForm = ({ user, onUpdate }: Props) => {
               Saving
             </>
           ) : (
-            'Save User Settings'
+            "Save User Settings"
           )}
         </Button>
       </form>
     </Form>
-  )
-}
+  );
+};
 
-export default ProfileForm
+export default ProfileForm;

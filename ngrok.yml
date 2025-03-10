@@ -1,5 +1,5 @@
 version: 2
-authtoken: 2NemGio0nI3M9nsmB180RGT6kPM_47Hm9VVJheniWwsNRnTCc
+authtoken: 2Zjm2KeCRNggWh0drJxbqZfsSTK_3bZW3WjXAq9sWFL753sCA
 tunnels:
   my_tunnel_name:
     labels:
