@@ -97,7 +97,7 @@ const ProfileForm = ({ user, onUpdate }: Props) => {
               <FormControl>
                 <Input
                   {...field}
-                  // disabled={true}
+                  disabled={true}
                   placeholder="Email"
                   type="email"
                 />

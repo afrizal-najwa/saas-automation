@@ -60,6 +60,9 @@ const Footer = () => {
           <p className="text-center sm:text-left">
             &copy; {new Date().getFullYear()} ZapStream. All rights reserved.
           </p>
+          <p className="text-center sm:text-left">
+            Tugas ADSI : Afrizal, Erwin, Wiyan
+          </p>
         </div>
       </div>
     </footer>
