@@ -22,7 +22,7 @@ const PricingPage = () => {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Hobby
-                <h2 className="text-6xl ">$0</h2>
+                <h2 className="text-6xl ">FREE</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
@@ -71,7 +71,7 @@ const PricingPage = () => {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Pro Plan
-                <h2 className="text-6xl ">$29</h2>
+                <h2 className="text-6xl ">99.000</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
@@ -119,7 +119,7 @@ const PricingPage = () => {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Unlimited
-                <h2 className="text-6xl ">$99</h2>
+                <h2 className="text-6xl ">149.000</h2>
               </CardItem>
               <CardItem
                 translateZ="60"

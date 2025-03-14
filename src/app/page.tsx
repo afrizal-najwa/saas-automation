@@ -65,7 +65,7 @@ export default function Home() {
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Hobby
-                <h2 className="text-6xl ">$0</h2>
+                <h2 className="text-6xl ">Free</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
@@ -108,13 +108,13 @@ export default function Home() {
             </CardBody>
           </CardContainer>
           <CardContainer className="inter-var ">
-            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-[#E2CBFF] border-purple-500 w-[300px] md:!w-[350px] h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-[#E2CBFF] border-gray-500 w-[300px] md:!w-[350px] h-auto rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Pro Plan
-                <h2 className="text-6xl ">$29</h2>
+                <h2 className="text-6xl ">99.000</h2>
               </CardItem>
               <CardItem
                 translateZ="60"
@@ -158,13 +158,13 @@ export default function Home() {
             </CardBody>
           </CardContainer>
           <CardContainer className="inter-var ">
-            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-[#ac75f0] border-purple-700 w-[300px] md:!w-[350px] h-auto rounded-xl p-6 border">
+            <CardBody className="bg-gray-50 relative group/card  dark:hover:shadow-2xl dark:hover:shadow-neutral-500/[0.1] dark:bg-black dark:border-[#ac75f0] border-gray-700 w-[300px] md:!w-[350px] h-auto rounded-xl p-6 border">
               <CardItem
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white "
               >
                 Unlimited
-                <h2 className="text-6xl ">$99</h2>
+                <h2 className="text-6xl ">149.000</h2>
               </CardItem>
               <CardItem
                 translateZ="60"

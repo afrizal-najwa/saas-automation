@@ -79,17 +79,17 @@ const EnterprisePage: React.FC = () => {
           </p>
           <p className="mb-4">
             Email:{" "}
-            <Link href="mailto:jeff.jiang13@gmail.com">
+            <Link href="mailto:najwaafrizal@gmail.com">
               <span className="text-blue-500 hover:underline">
-                jeff.jiang13@gmail.com
+                najwaafrizal@gmail.com
               </span>
             </Link>
           </p>
           <p className="mb-4">
             Phone:{" "}
-            <Link href="tel:+1234567890">
+            <Link href="tel:+6281339207880">
               <span className="text-blue-500 hover:underline">
-                +1 (234) 567-890
+                +6281339207880
               </span>
             </Link>
           </p>
