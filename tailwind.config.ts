@@ -20,12 +20,12 @@ const config: Config = {
       colors: {
         background: {
           DEFAULT: "var(--background)",
-          light: "#37B7C3", // Light purple for light mode
+          light: "#F8FAFC", // Light purple for light mode
           dark: "hsl(var(--background))",
         },
-        purpleStart: "#071952", // Example starting purple color
-        purpleEnd: "#088395", // Example ending purple color
-        lightPurple: "#37B7C3", // Light purple color
+        purpleStart: "#F8FAFC", // Example starting purple color
+        purpleEnd: "#F8FAFC", // Example ending purple color
+        lightPurple: "#F8FAFC", // Light purple color
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",

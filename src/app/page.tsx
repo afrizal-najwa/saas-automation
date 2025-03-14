@@ -25,14 +25,14 @@ export default function Home() {
                 <Link href="/dashboard">
                   <Button
                     size={"lg"}
-                    className="p-4 md:p-8 mb-8 md:mb-0 text-lg md:text-2xl w-full sm:w-fit dark:border-t-2 rounded-full dark:border-[#e6e7f7] bg-purple-100 dark:bg-[#1F1F1F] hover:bg-[#ffffff] dark:hover:bg-white group transition-all flex items-center justify-center gap-4 hover:shadow-xl hover:shadow-neutral-500 duration-500"
+                    className="p-4 md:p-8 mb-8 md:mb-0 text-lg md:text-2xl w-full sm:w-fit dark:border-t-2 rounded-full dark:border-[#e6e7f7] bg-gray-100 dark:bg-[#1F1F1F] hover:bg-[#ffffff] dark:hover:bg-white group transition-all flex items-center justify-center gap-4 hover:shadow-xl hover:shadow-neutral-500 duration-500"
                   >
-                    <span className="bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-500 dark:to-neutral-600 bg-gradient-to-r from-purple-500 to-purple-600 md:text-center font-sans group-hover:bg-gradient-to-r dark:group-hover:from-black dark:group-hover:to-gray-300 group-hover:from-purple-500 group-hover:to-purple-200">
+                    <span className="bg-clip-text text-transparent dark:bg-gradient-to-r dark:from-neutral-500 dark:to-neutral-600 bg-gradient-to-r from-gray-500 to-gray-600 md:text-center font-sans group-hover:bg-gradient-to-r dark:group-hover:from-black dark:group-hover:to-gray-300 group-hover:from-gray-500 group-hover:to-gray-200">
                       Start For Free Today
                     </span>
                   </Button>
                 </Link>
-                <h1 className="mb-10 text-5xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white dark:to-neutral-600 to-purple-500 font-sans font-bold">
+                <h1 className="mb-10 text-5xl md:text-8xl bg-clip-text text-transparent bg-gradient-to-b from-white dark:to-neutral-600 to-gray-500 font-sans font-bold">
                   Automate Your Work With ZapStream
                 </h1>
               </div>
