@@ -61,7 +61,7 @@ const Footer = () => {
             &copy; {new Date().getFullYear()} ZapStream. All rights reserved.
           </p>
           <p className="text-center sm:text-left">
-            Tugas ADSI : Afrizal, Erwin, Wiyan
+            ADSI Project by Afrizal, Erwin, and Wiyan
           </p>
         </div>
       </div>

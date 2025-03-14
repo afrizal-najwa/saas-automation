@@ -16,7 +16,7 @@ export function LampComponent() {
   if (!mounted) return null;
   const textClasses =
     theme === 'light'
-      ? 'animate-text bg-gradient-to-r from-purple-100 via-purple-500 to-purple-950 bg-clip-text text-transparent font-black'
+      ? 'animate-text bg-gradient-to-r from-gray-100 via-gray-500 to-gray-950 bg-clip-text text-transparent font-black'
       : 'bg-gradient-to-br from-neutral-300 to-neutral-500 bg-clip-text dark:text-transparent';
 
   return (
