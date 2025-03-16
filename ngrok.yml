@@ -2,6 +2,5 @@ version: 2
 authtoken: 2Zjm2KeCRNggWh0drJxbqZfsSTK_3bZW3WjXAq9sWFL753sCA
 tunnels:
   my_tunnel_name:
-    labels:
-      - edge=edghts_2hi1k85grRFRc6P7RHQ27nomtXi
-    addr: https://localhost:3000
+    proto: http
+    addr: 3000
