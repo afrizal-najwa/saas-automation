@@ -11,6 +11,7 @@
         tier: "Free", // Set tier ke "Free"
         credits: "10", // Set credits default
         profileImage: "", // Opsional, gambar profil
+        clerkId: "99"
         },
     });
 
