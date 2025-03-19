@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --experimental-https",
+    "dev": "next dev",
     "build": "next build",
     "postinstall": "prisma generate",
     "start": "next start",
@@ -37,6 +37,7 @@
     "@types/uuid": "^9.0.8",
     "@uploadcare/blocks": "^0.35.2",
     "@uploadcare/react-uploader": "^1.5.0",
+    "@xyflow/react": "^12.4.4",
     "axios": "^1.6.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

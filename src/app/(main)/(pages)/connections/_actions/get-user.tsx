@@ -9,7 +9,7 @@ export const getUserData = async (id: string) => {
     },
     include: {
       connections: true,
-      workflows: true,
+      workflows: true
     },
   })
 
